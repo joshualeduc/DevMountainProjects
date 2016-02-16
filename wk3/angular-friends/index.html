@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="angularFriends">
+<head>
+  <title>Angular Friends</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="FriendController">
+
+  <h1>The <strong>facebook</strong> Friend Machine</h1>
+
+  <div class="friends">
+    <form class="form-inline searchForm" role="form">
+      <div class="form-group">
+
+        <!-- <input class="form-control" placeholder="Search Anything About Your Friends" ng-model="searchTerm"> -->
+        <!-- STEP 5: Get rid of the one above when you uncomment the below-->
+
+        <input class="form-control" placeholder="Search Name" ng-model="searchName.name">
+        <input class="form-control" placeholder="Search Location" ng-model="searchLocation.current_location.name">
+
+        <!-- <input class="form-control" placeholder="Search Location" ng-model="searchLocation"> why does this not work with filter: {current_location.name: searchLocation}? ng-model="searchName" worked with {name: search},
+        Jeremy said filter: {current_location: {name: searchLocation}} would work correctly
+        filter: {name: searchName, current_location:{$: searchLocation}} works, shown in updated angular docs-->
+
+
+        <select class="input-medium" ng-model="property">
+          <option value="name">Name</option>
+          <option value="friend_count">#Friends</option>
+          <option value="current_location.city">City</option>
+          <option value="current_location.state">State</option>
+          <option value="current_location.country">Country</option>
+        </select>
+
+        <select class="input-medium" ng-model="reversed">
+          <option value="false">Descending</option>
+          <option value="true">Ascending</option>
+        </select>
+
+      </div>
+    </form>
+
+    <ul>
+      <li class='friend'>
+        <img class="profile-pic" src='http://placebear.com/50/50.jpg'>
+
+        <h3>Cali Fornia</h3>
+
+        <div class="location">
+          Location: New Port Beach, California, United States
+        </div>
+
+        <div class="status">
+          Status: I hate the snow. I wish I was on the beach right now!!! <span class="hashtag">#ihateprovo</span>
+        </div>
+
+        <div class="num-friends">
+          Friends: 1,367
+        </div>
+      </li>
+      <li class="friend" ng-repeat="item in friends | filter: searchName | filter: searchLocation | orderBy: property : reversed">
+        <img src="{{item.pic_square}}" alt="" class="profile-pic">
+        <h3>{{item.name}}</h3>
+        <div class="location">
+          Location: {{item.current_location.city}}, {{item.current_location.state}}, {{item.current_location.country}}
+        </div>
+        <div class="status">Status: {{item.status.message}}</div>
+        <div class="num-friends">Friends: {{item.friend_count}}</div>
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="FriendController.js"></script>
+</body>
+</html>
