@@ -1,0 +1,26 @@
+<div class="inner-container">
+  <div class="team-container">
+    <img src="/images/jazz-logo.png" alt="" />
+    <div class="together-game" ng-repeat="game in jazzData" ng-class="{'even' : $index % 2 === 0}">
+      Date: {{game.updatedAt | date: short}} <br />
+      {{game.homeTeam}} - {{game.homeTeamScore}} <br />
+      {{game.opponent}} - {{game.opponentScore}} </br />
+    </div>
+  </div>
+  <div class="team-container">
+    <img src="/images/lakers-logo.png" alt="" />
+    <div class="together-game" ng-repeat="game in lakersData" ng-class="{'even' : $index % 2 === 0}">
+      Date: {{game.updatedAt | date: short}} <br />
+      {{game.homeTeam}} - {{game.homeTeamScore}} <br />
+      {{game.opponent}} - {{game.opponentScore}} </br />
+    </div>
+  </div>
+  <div class="team-container">
+    <img src="/images/heat-logo.png" alt="" />
+    <div class="together-game" ng-repeat="game in heatData" ng-class="{'even' : $index % 2 === 0}">
+      Date: {{game.updatedAt | date: short}} <br />
+      {{game.homeTeam}} - {{game.homeTeamScore}} <br />
+      {{game.opponent}} - {{game.opponentScore}} </br />
+    </div>
+  </div>
+</div>
