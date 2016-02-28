@@ -1,0 +1,45 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    height: 15%;
+    background-color: lightgrey;
+}
+
+.box{
+    height: 12%;
+    width: 10%;
+    float: left; /*How do I float this above nav? */
+    background-color: dodgerblue;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+.text {
+    height: 25%;
+}
+
+.row1 {
+    height: 15%;
+    background-color: royalblue;
+
+}
+
+.row2 {
+    height: 15%;
+    background-color: aquamarine;
+}
+
+.row3 {
+    height: 15%;
+    background-color: palegreen;
+}
+
+.row4 {
+    height: 15%;
+    background-color: yellow;
+}

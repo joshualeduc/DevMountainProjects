@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    background-color: royalblue;
+    width: 33%;
+    height: 100%;
+    float: left;
+}
+
+.middle {
+    background-color: lightseagreen;
+    width: 34%;
+    height: 100%;
+    display: inline-block;
+}
+
+.right {
+    background-color: palegreen;
+    width: 33%;
+    height: 80%;
+    float: right;
+}
+
+
+.corner {
+    background-color: red;
+    width: 33%;
+    height: 20%;
+    float: right;
+    position: relative;
+    bottom: 20.35%;
+}
