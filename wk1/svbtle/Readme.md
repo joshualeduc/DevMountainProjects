@@ -1,0 +1,1 @@
+Are we suppose to sign up for the free trial to see a page? I don't want to give them my credit card info. So far, I've loosely based this assignment off of the picture posted in the lesson material. I cannot grab any fonts or pictures from the site.

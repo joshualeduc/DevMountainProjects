@@ -1,0 +1,46 @@
+#content{
+	position: relative;
+	width: 100%;
+	margin: auto;
+	display: inline-block;
+}
+#nav1{
+	background-color: green;
+	width: 125px;
+	top: 0;
+	position: absolute;
+}
+#nav2{
+/*	Why does rotating this div push it out of the content div?*/
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	background-color: red;
+	height: 50px;
+	width: 70px;
+	right: 0;
+	top: 0;
+	position: absolute;
+}
+li{
+	list-style-type: none;
+}
+#container{
+	margin-left: 130px;
+	margin-right: 65px;
+	overflow: hidden;
+}
+article{
+	width: 65%;
+	background-color: blue;
+	float: left;
+}
+aside{
+	width: 34%;
+	background-color: purple;
+	float: right;
+}
+footer{
+	clear: both;
+	text-align: center;
+	background-color: yellow;
+}

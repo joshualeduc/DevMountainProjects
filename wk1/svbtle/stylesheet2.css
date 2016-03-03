@@ -1,0 +1,42 @@
+#content{
+	position: relative;
+	width: 100%;
+	margin: auto;
+	display: inline-block;
+}
+#nav1{
+	background-color: green;
+	width: 125px;
+	top: 0;
+	position: absolute;
+}
+#nav2{
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	background-color: red;
+	height: 50px;
+	width: 70px;
+	right: 0;
+	top: 0;
+	position: absolute;
+}
+li{
+	list-style-type: none;
+}
+#container{
+	margin-left: 130px;
+	margin-right: 65px;
+}
+article{
+	width: 100%;
+	background-color: blue;
+}
+aside{
+	width: 100%;
+	background-color: purple;
+}
+footer{
+	clear: both;
+	text-align: center;
+	background-color: yellow;
+}
