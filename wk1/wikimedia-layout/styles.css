@@ -1,0 +1,25 @@
+#text{
+	margin: 0 15%;
+}
+p:nth-child(3){
+	text-align:right;
+}
+.icons{
+	display:inline-block;
+	margin: 0 15%;
+}
+/*This makes my icons look exactly like the main page, 
+but only if the browser windows it the correct size. 
+How do I make it work for any size?*/
+.icons a{
+	padding: 0px 25px;
+}
+#footer{
+	text-align: center;
+}
+#list li{
+	display:inline;
+	list-style-type: none;
+}
+
+
