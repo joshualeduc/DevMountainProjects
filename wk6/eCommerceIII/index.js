@@ -17,6 +17,12 @@ app.get('/api/products', mainCtrl.getProducts);
 app.put('/api/products', mainCtrl.updateProducts);
 app.delete('/api/products', mainCtrl.removeProducts);
 
+app.post('/api/order/:user_id', mainCtrl.postOrder);
+app.get('/api/order', mainCtrl.getOrder);
+app.post('/api/cart/:user_id', mainCtrl.postCart);
+app.put('/api/cart/:user_id', mainCtrl.putCart);
+app.get('/api/user/:id', mainCtrl.getUser);
+
 app.listen(5050, function(){
   console.log('Now listening on port: 5050');
 });
