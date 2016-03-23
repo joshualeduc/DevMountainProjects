@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
-var cart = require('./cart.js')
+var carts = require('./carts.js')
 var userSchema = new mongoose.Schema({
   name: {type: String, required: true},
   email: {type: String, required: true, index: true},
   password: {type: String, required: true},
-  cart: [cart],
+  cart: [carts],
   orders: []
 });
 module.exports = mongoose.model('User', userSchema);

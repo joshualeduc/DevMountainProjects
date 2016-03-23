@@ -1,5 +1,4 @@
-var Product = require('../model/product.js');
-var Cart = require('../model/cart.js');
+var Product = require('../model/product.js').model;
 var Order = require('../model/order.js');
 var User = require('../model/user.js');
 
@@ -32,14 +31,14 @@ module.exports = {
   postOrder: function(req, res){
     var userId = req.params.userId;
     User.findById(userId, function(error, data){
-      error ? return res.sendStatus(500).send(error) : null;
+      return error ? res.sendStatus(500).send(error) : null;
       var userObj = data;
       var userOrder = {};
       userOrder.products = userObj.cart;
       userOrder.userId = userId;
       var newOrder = new Order(userOrder);
       newOrder.save(function(error, data){
-        error ? return res.sendStatus(500).send(error) : null;
+        return error ? res.sendStatus(500).send(error) : null;
         userObj.cart = [];
         userObj.orders.push(mongoose.Types.ObjectId(result._id));
         userObj.save(function(error, data){
@@ -54,7 +53,7 @@ module.exports = {
     });
   },
   postCart: function(req, res){
-    User.findByIdAndUpdate(req.params.user_id, {$push: req.body}}, function(error, data){
+    User.findByIdAndUpdate(req.params.user_id, {$push: req.body}, function(error, data){
       return error ? res.status(500).send(error) : res.send(data);
     });
   },
