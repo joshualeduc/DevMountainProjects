@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var mongo = require('mongojs');
 
 var app = express();
-var db = mongo('ecommerce', ['products']);
+var db = mongo('ecommerce', ['eCommerce1']);
 app.use(cors());
 app.use(bodyParser.json());
 app.listen(5050, function(){
