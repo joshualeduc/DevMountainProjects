@@ -23,13 +23,17 @@ var users = [
 
 module.exports = {
   login: function(req, res){
+    var userFound = false;
     for (var i = 0; i < users.length; i++){
-      if (users[i].name === req.body.name && users[i].password === req.body.password){
+      if (users[i].name === req.body.userName && users[i].password === req.body.password){
         req.session.currentUser = users[i];
-        res.send({userFound: true});
-      }else {
-        res.send({userFound: false});
+        userFound = true;
       }
+    }
+    if (userFound) {
+      res.send({userFound: true});
+    }else {
+      res.send({userFound: false});
     }
   }
 };
