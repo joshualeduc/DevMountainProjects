@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="quoteBook">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="mainCtrl">
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="quote in quotes | filter: userFilter">{{quote.text}} -{{quote.author}}</li>
+  </ul>
+  <form class="form-horizontal" ng-submit="onSubmit()">
+    <div class="col-sm-5">
+      <div class="btn mybtn btn-success btn-lg" ng-click="addBox = !addBox">Add Quote</div>
+      <div class="btn mybtn btn-danger btn-lg" ng-click="removeBox = !removeBox">Remove Quote</div>
+      <div class="btn mybtn btn-info btn-lg" ng-click="filterBox = !filterBox">Filter Quotes</div>
+    </div>
+    <div class="col-sm-6">
+      <input class="form-control" type="text" ng-model="input" ng-show="addBox" placeholder="Text of quote to add">
+      <input class="form-control" type="text" ng-model="input" ng-show="removeBox" placeholder="Text of quote to remove">
+      <input class="form-control" type="text" ng-model="input" ng-show="filterBox" placeholder="Filter quotes by text line">
+    </div>
+    <div class="col-sm-1">
+      <input type="submit" value="Submit" class="btn btn-primary btn-lg" ng-show="addBox || removeBox || filterBox"></input>
+    </div>
+  </form>
+</body>
+<script src="http://code.jquery.com/jquery-1.11.3.js" charset="utf-8"></script>
+<script src="https://code.angularjs.org/1.4.7/angular.js" charset="utf-8"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
+
+<script src="js/app.js" charset="utf-8"></script>
+<script src="js/dataServer.js" charset="utf-8"></script>
+<script src="js/mainCtrl.js" charset="utf-8"></script>
+</html>
