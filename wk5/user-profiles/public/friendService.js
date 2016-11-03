@@ -1,5 +1,5 @@
 angular.module('userProfiles')
-.factory('friendService', function( $http ) {
+.factory('friendService', function( $http, $q ) {
   return {
     
     login: function( user ) {
@@ -7,9 +7,11 @@ angular.module('userProfiles')
     },
 
     getFriends: function() {
+      var deferred = $q.defer();
     	$http.get('/api/profiles').then(function(response){
-        return response.data;
+        deferred.resolve(response.data);
       });
+      return deferred.promise;
     }
   }
 });
