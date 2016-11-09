@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+  <div class="panel-heading" role="tab" id="{{'heading' + question}}">
+    <h4 class="panel-title">
+      <a role="button" data-toggle="collapse" data-parent="#accordion" data-target="{{'#collapse' + question.$id}}" aria-expanded="true" aria-controls="{{'collapse' + question.$id}}" ng-click="pickQuestion(question)">
+        {{question.title}}
+      </a>
+    </h4>
+  </div>
+  <div id="{{'collapse' + question.$id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{'heading' + question.$id}}">
+    <div class="panel-body">
+      <comment-list ng-repeat="comment in comments"></comment-list>
+      <form ng-submit="submitComment(qComment);">
+        <div class="form-group">
+          <input class="form-control comment-box" type="text" placeholder="Answer a question" ng-model="qComment">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

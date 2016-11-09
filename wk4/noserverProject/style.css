@@ -1,0 +1,124 @@
+.navbar {
+  background-color: #00ade4;
+}
+.navbar-brand {
+  padding: 8px 10px;
+}
+.navbar-nav>li>a {
+  color: white;
+}
+.navbar-nav>li>a:focus {
+  background-color: #00ade4;
+  color: white;
+}
+.navbar-nav>li>a:hover {
+  background-color: #00ade4;
+  color: white;
+}
+.navbar-nav .open>a, .navbar-nav .open>a:focus, .navbar-nav .open>a:hover {
+  background-color: #00ade4;
+  /*border-color: #337ab7;*/
+}
+.dropdown-menu>li>a {
+  color: dimgrey;
+}
+.dropdown-toggle {
+  color: white;
+}
+
+/*Body*/
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+main {
+  /*display: block;*/
+  margin-top: 80px;
+}
+body {
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 1080px !important;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"], .row.no-gutters > [class*=" col-"] {
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+}
+
+.panel {
+  border: 0px;
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.07);
+}
+.panel-body {
+  padding: 30px;
+}
+
+.tab-content-custom {
+  padding: 25px;
+  padding-bottom: 5px;
+}
+
+.center-block {
+  float: none;
+}
+
+.q-comments {
+  margin: 5px;
+}
+
+.comment-box {
+  margin-top: 25px;
+}
+
+.question-box {
+  /*margin-top: 10px;*/
+}
+
+.custom-form-group {
+  margin: 15px;
+}
+
+.well-custom {
+  margin-bottom: 5px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn-default {
+  background-color: #e2e2e2;
+}
+.btn-default:hover {
+  background-color: #adadad;
+}
+
+.btn-primary {
+  background: #007aff;
+  border-color: #007aff;
+}
+.btn-info {
+  background: #68cfff;
+  border-color: #68cfff;
+}
+.btn-success {
+  background: #5cdc58;
+  border-color: #5cdc58;
+}
+.btn-warning {
+  background: #FCA600;
+  border-color: #FCA600;
+}
+.btn-danger {
+  background: #fa5727;
+  border-color: #fa5727;
+}
