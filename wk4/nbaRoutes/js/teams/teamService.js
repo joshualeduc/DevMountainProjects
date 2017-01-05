@@ -1,4 +1,4 @@
-var app = angular.module('nbaRoutes');
+ var app = angular.module('nbaRoutes');
 
 app.service('teamService', function($http, $q){
   this.addNewGame = function(gameObj){
